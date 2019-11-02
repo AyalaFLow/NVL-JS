@@ -1,0 +1,10 @@
+var a = "Amigo";
+alert(a + " " + "Primer método");
+document.write("Convertimos Amigo a minusculas todas, 1 método toLowerCase" + "<br>");
+document.write("<b>" + a.toLowerCase() + "</b>" + "<br>");
+alert(a + " " + "Segundo método");
+document.write("Convertimos Amigo a minusculas todas, 2 método Replace" + "<br>");
+document.write("<b>" + a.replace("A","a") + "</b>" + "<br>");
+alert(a + " " + "Tercer método");
+document.write("Convertimos Amigo a minusculas todas, 3 método toLocaleLowerCase" + "<br>");
+document.write("<b>" + a.toLocaleLowerCase() + "</b>" + "<br>");
