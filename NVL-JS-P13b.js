@@ -1,21 +1,20 @@
-var n;
-var ini = 2;
-var numerosPrimos = [];
-n = parseInt(prompt("Ingresar un numero de 0 a 100 para calcular sus numeros primos"));
-function primo (n){
-	for (var i= 2; i<n; i++){
-		if(n %i ===0){
-			return false;
-		}
-		if (n>100){
-		return;
-		}
+var fraseUser;
+var vueltaFrase;
+var resultado;
+fraseUser = prompt("Ingresa la frase y te diremos si es Palindroma o no.");
+
+function comparacion(fraseUser){
+	fraseUser=fraseUser.toLowerCase().replace(/\s/g, "");
+	vueltaFrase= fraseUser.split("").reverse().toString();
+	for (var i = 0;i<vueltaFrase.length; i++){
+		vueltaFrase = vueltaFrase.replace(",","");
 	}
-	return n !==1;
-}
-for (; ini<n; ini++){
-	if (primo(ini)){
-		numerosPrimos.push(ini);
+	if(fraseUser == vueltaFrase){
+		resultado = "es un Palindromo";
+	}else{
+		resultado = "no es un Palindromo";
 	}
-}
-document.write("Los numero primos hasta " + n + " son: " + "<br> " + numerosPrimos);
+	alert("Tu frase " + resultado);
+} 
+comparacion(fraseUser);
+alert(fraseUser.length);
